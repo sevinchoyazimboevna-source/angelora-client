@@ -1,7 +1,8 @@
 import React, { createContext } from "react";
 import { io, Socket } from "socket.io-client";
 
-const socket = io(process.env.VITE_API_URL as string, {
+const socket = io(process.env.VITE_API_URL
+   as string, {
   withCredentials: true,
 });
 export const SocketContext = createContext<Socket>(socket);
